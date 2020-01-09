@@ -1,4 +1,13 @@
-function solve(input){
+function solve(size = 5) {
+    let result = new Array(size);
 
+    for (let i = 0; i < size; i++) {
+        result[i] = "* ".repeat(size).trim();
+    }
+
+    return result.join("\n");
 }
-solve(1)
+
+console.log(solve(9));
+console.log(solve(2));
+console.log(solve(4));
