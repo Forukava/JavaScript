@@ -1,8 +1,12 @@
 function solve(arr){
-    let bet = arr.toUpercase()
-    bet.sort((a, b) => a.length - b.length);
-      console.log(bet.join('\n'))
+    
+    arr.sort((a, b) => a.length - b.length || a.localeCompare(b));
+      console.log(arr.join('\n'))
 };
 
 
-solve(['alpha', 'beta', 'gamma'])
+solve(['test', 
+'Deny', 
+'omen', 
+'Default']
+)
