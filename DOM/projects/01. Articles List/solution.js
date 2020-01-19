@@ -13,4 +13,7 @@ function createArticle() {
 	 article.appendChild(h3)
 	 article.appendChild(p)
 	 articles.appendChild(article)
+
+	 input.value = ''
+	 textarea.value = ''
 }
