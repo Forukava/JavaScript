@@ -7,6 +7,10 @@ function createArticle() {
 	let textarea = document.getElementById('createContent')
 	let articles = document.getElementById('articles')
 
+	if(input === null || textarea === null || articles === null){
+		throw new Error('Something is wrong...')
+	}
+
 	h3.innerHTML = input.value;
 	 p.innerHTML = textarea.value;
 
@@ -17,3 +21,5 @@ function createArticle() {
 	 input.value = ''
 	 textarea.value = ''
 }
+
+document.getElementById('createArticleButton').addEventListener('click', createArticle)
