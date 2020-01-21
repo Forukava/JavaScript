@@ -25,8 +25,11 @@
             if(td.textContent == email){
                let tr = td.parentNode;
                tr.parentNode.removeChild(tr)
+               document.getElementById('result').textContent = 'Deleted.'
+               return
             }
         }
+        document.getElementById('result').textContent = "Not found."
     }
 </script>       
 </body>
