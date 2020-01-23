@@ -1,20 +1,20 @@
 function htmlTable(data){
     let parseData = data.map(x => JSON.parse(x))
 
-    let createTable = content => `<table>\n${content}\n</table>`
-    let createRow = content => `<tr>\n  ${content}\n</tr>`
-    let createData = content => `<td>\n    ${content}\n</td>`
+    let createTable = content => `<table>${content}\n</table>`
+    let createRow = content => `\n      <tr>${content}\n     </tr>`
+    let createData = content => `\n         <td>${content}</td>`
 
-    console.log(createTable('Im table'))
-    console.log(createRow('I m Row'))
-    console.log(createData('Im data'))
-   //parseData.reduce((accRows, row)=>{
-    //console.log(row.name)
-    //Object.value(row).reduce((tdAcc, td) =>{
-        //return tdAcc + createData(td)
-    //})
-  // } , '')
+    
+   let result = parseData.reduce((accRows, row)=>{
+   
+   let tdForPerson =  Object.values(row).reduce((tdAcc, td) =>{
+        return tdAcc + createData(td)
+   } , '')
+   return accRows + createRow(tdForPerson)
+} , '')
+return createTable(result)
 }
-htmlTable(['{"name":"Pesho","position":"Promenliva","salary":100000}',
+console.log(htmlTable(['{"name":"Pesho","position":"Promenliva","salary":100000}',
 '{"name":"Teo","position":"Lecturer","salary":1000}',
-'{"name":"Georgi","position":"Lecturer","salary":1000}'])
+'{"name":"Georgi","position":"Lecturer","salary":1000}']))
