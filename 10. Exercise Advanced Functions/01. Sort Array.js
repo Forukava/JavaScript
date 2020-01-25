@@ -1,6 +1,6 @@
 function sort(input, arg){
     let result = input.sort((a,b)=> arg === 'asc' ?  a-b : b-a)
-return result
+        console.log(result)
 
     
 }
