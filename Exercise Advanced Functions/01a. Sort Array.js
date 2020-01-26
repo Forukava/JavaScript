@@ -1,6 +1,6 @@
 function sort(a, b){
     let sorter = filter();
-    return sorter[b](a)
+    return sorter[b](a);
     function filter(){
         return {
             asc: (s) => s.sort((a,b) => a-b),
