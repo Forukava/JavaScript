@@ -16,4 +16,5 @@ function personalBMI(name, age, weight, height) {
     }
 
     return obj;
-}
+} 
+personalBMI('Peter', 29, 75, 182)
