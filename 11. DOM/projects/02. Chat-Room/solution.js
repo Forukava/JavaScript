@@ -3,10 +3,7 @@ function solve() {
    let sendBtn = document.getElementById('send');
    let textArea = document.getElementById("chat_input")
    let chatMessageArea = document.getElementById('chat_messages')
-   
-   
-
-
+  
    sendBtn.addEventListener('click', function(){
      let targetDivClone =  targetDiv.cloneNode(true);
      let textAreaContent = textArea.value;
