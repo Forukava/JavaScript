@@ -4,8 +4,6 @@ function solve() {
     let messafeField = document.getElementById('chat_messages')
     
     sendButton.addEventListener('click', (e) =>{
-      
-      console.log(input.value)
 
       let newElement = document.createElement('div')
       newElement.innerHTML = input.value;
