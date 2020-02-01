@@ -6,6 +6,13 @@ function solve() {
 
     let operators = ['+', '-', '/', '*']
 
+    let operations = {
+        '+': (num1, num2) => Number(num1) + Number(num2),
+        '-': (num1, num2) => Number(num1) - Number(num2),
+        '*': (num1, num2) => Number(num1) * Number(num2),
+        '/': (num1, num2) => Number(num1) / Number(num2)
+        }
+
     clearButton.addEventListener('click', () =>{
         output.innerHTML = '';
         result.innerHTML = '';
@@ -15,6 +22,16 @@ function solve() {
        if(!value){
            return
        }
+       if(value === "="){
+           let params = output.innerHTML.split(' ');
+           if(params[2]){
+           result.innerHTML=operations[params[1]](params[0],params[2])
+           return;
+           }
+           result.innerHTML = 'NaN'
+           return;
+       }
+
        if(operators.includes(value)){
        output.innerHTML = output.innerHTML + `${value}`
            return
