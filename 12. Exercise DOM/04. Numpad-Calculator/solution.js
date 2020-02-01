@@ -2,7 +2,7 @@ function solve() {
     let pad = document.getElementsByClassName('keys')[0];
     let output = document.getElementById('expressionOutput');
     let result = document.getElementById('resultOutput');
-    let clearButton = document.getElementsByClassName('.clear')[0];
+    let clearButton = document.getElementsByClassName('clear')[0];
 
     let operators = ['+', '-', '/', '*']
 
