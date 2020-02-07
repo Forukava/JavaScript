@@ -2,10 +2,20 @@ function lockedProfile() {
     const buttons = document.querySelectorAll("#main > div > button");
   [...buttons]
   .forEach((button) => {
-      button.addEventListener('click', (event) => {
+      button.addEventListener('click', eventHandler)
+  })
+            function eventHandler(event){
            const divSibling = event.currentTarget.parentNode.children[9]
-           divSibling.style.display = 'block'
-           console.log(divSibling.id)
-      })
-  });
-} 
+           const selector = divSibling.id.split('HiddenFields')[0];
+           const lockInput = document.querySelector(`input[name='${selector + 'Locked'}']`);
+           const button = event.currentTarget;
+
+           if(!lockInput.checked && button.textContent === 'Show more'){
+               divSibling.style.display = 'block';
+               button.textContent = 'Hide it';
+           }else if(!lockInput.checked){
+                divSibling.style.dispay = 'none';
+                button.textContent = 'Show more'
+           }
+}
+}
