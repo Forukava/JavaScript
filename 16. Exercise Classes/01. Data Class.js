@@ -3,9 +3,9 @@ class httpRequest {
     response = undefined;
     fulfilled = false;
 
-    constructor(method, url, version, message){
+    constructor(method, uri, version, message){
         this.method = method;
-        this.url = url;
+        this.uri = uri;
         this.version = version;
         this.message = message
     }
