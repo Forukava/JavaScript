@@ -4,4 +4,8 @@ let expect = require('chai').expect
 
 describe('isOddOrEven()behaivor', () =>{
     
+
+    it('', () => {
+        
+    })
 })
