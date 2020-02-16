@@ -1,11 +1,10 @@
-let isOddOrEven = require('./func')
-let assert = require('chai').assert
-let expect = require('chai').expect
-
-describe('isOddOrEven()behaivor', () =>{
-    
-
-    it('', () => {
-        
-    })
-})
+function isOddOrEven(string) {
+    if (typeof(string) !== 'string') {
+        return undefined;
+    }
+    if (string.length % 2 === 0) {
+        return "even";
+    }
+    return "odd";
+}
+module.exports = isOddOrEven

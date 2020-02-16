@@ -1,7 +1,10 @@
-let isOddOrEven = require('./func')
+let isOddOrEven = require('./test')
 let assert = require('chai').assert
-let expect = require('chai').expect
 
-describe('isOddOrEven()behaivor', () =>{
+describe('isOddOrEven() behaivor', () =>{
+    it('check the type of the input - Number case',() => {
+let result = isOddOrEven(12)
+assert.equal(result, undefined, 'The resul is not undefined')
+    })
     
 })
