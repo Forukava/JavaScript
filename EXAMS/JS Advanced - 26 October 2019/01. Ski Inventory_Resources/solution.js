@@ -18,9 +18,13 @@ function solve() {
          let productName = e.target.parentNode.parentNode.querySelector('span').textContent
          let basketElement = document.createElement('li')
          basketElement.innerText = productName
+         let productQuantityCountRef = e.target.parentNode.parentNode.querySelector('strong')
+
          let basketElementProductPrice = document.createElement('strong')
          basketElementProductPrice.innerText = productPrice
+         basketElement.appendChild(basketElementProductPrice)
          myProductsList.appendChild(basketElement)
+         priceSoFar += Number(productPrice)
          totalPriceRef[1].innerHTML = `Total Price: ${(priceSoFar + Number(productPrice)).toFixed(2)}`
       }
    }
@@ -44,7 +48,7 @@ function solve() {
       itemName.innerText = itemInput[0].value
       
       let itemQuantity = document.createElement('strong')
-      itemQuantity.innerText = itemInput[1].value
+      itemQuantity.innerText = `Available : ${itemInput[1].value}`
 
       let priceContainer = document.createElement('div')
       
